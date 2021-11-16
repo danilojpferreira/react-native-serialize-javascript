@@ -5,8 +5,8 @@ See the accompanying LICENSE file for terms.
 */
 
 'use strict';
-
-var randomBytes = require('randombytes');
+require("./shim.js");
+var Crypto = require('crypto')
 
 // Generate an internal UID to make the regexp pattern harder to guess.
 var UID_LENGTH          = 16;
@@ -35,7 +35,7 @@ function escapeUnsafeChars(unsafeChar) {
 }
 
 function generateUID() {
-    var bytes = randomBytes(UID_LENGTH);
+    var bytes = Crypto.randomBytes(UID_LENGTH);
     var result = '';
     for(var i=0; i<UID_LENGTH; ++i) {
         result += bytes[i].toString(16);

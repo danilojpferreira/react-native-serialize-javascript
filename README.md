@@ -1,15 +1,13 @@
-Serialize JavaScript
+React Native Serialize JavaScript
 ====================
+
+This is a fork of project [serialize-javascript][original-lib] at version 6.0.0. Try resolve this [issue][issue] 
 
 Serialize JavaScript to a _superset_ of JSON that includes regular expressions, dates and functions.
 
-[![npm Version][npm-badge]][npm]
-[![Dependency Status][david-badge]][david]
-![Test](https://github.com/yahoo/serialize-javascript/workflows/Test/badge.svg)
-
 ## Overview
 
-The code in this package began its life as an internal module to [express-state][]. To expand its usefulness, it now lives as `serialize-javascript` — an independent package on npm.
+The code in this package began its life as an internal module to [express-state][express-state]. To expand its usefulness, it now lives as `serialize-javascript` — an independent package on npm.
 
 You're probably wondering: **What about `JSON.stringify()`!?** We've found that sometimes we need to serialize JavaScript **functions**, **regexps**, **dates**, **sets** or **maps**. A great example is a web app that uses client-side URL routing where the route definitions are regexps that need to be shared from the server to the client. But this module is also great for communicating between node processes.
 
@@ -24,13 +22,13 @@ Please note that serialization for ES6 Sets & Maps requires support for `Array.f
 Install using npm:
 
 ```shell
-$ npm install serialize-javascript
+$ npm install @danilo_pereira/react-native-serialize-javascript
 ```
 
 ## Usage
 
 ```js
-var serialize = require('serialize-javascript');
+var serialize = require('@danilo_pereira/react-native-serialize-javascript');
 
 serialize({
     str  : 'string',
@@ -133,10 +131,8 @@ This software is free to use under the Yahoo! Inc. BSD license.
 See the [LICENSE file][LICENSE] for license text and copyright information.
 
 
-[npm]: https://www.npmjs.org/package/serialize-javascript
-[npm-badge]: https://img.shields.io/npm/v/serialize-javascript.svg?style=flat-square
-[david]: https://david-dm.org/yahoo/serialize-javascript
-[david-badge]: https://img.shields.io/david/yahoo/serialize-javascript.svg?style=flat-square
+[original-lib]: https://david-dm.org/yahoo/serialize-javascript
+[issue]: https://github.com/yahoo/serialize-javascript/issues/87
 [express-state]: https://github.com/yahoo/express-state
 [JSON.stringify]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
 [LICENSE]: https://github.com/yahoo/serialize-javascript/blob/main/LICENSE
