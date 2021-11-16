@@ -1,9 +1,10 @@
 {
   "name": "@danilo_pereira/react-native-serialize-javascript",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Serialize JavaScript to a superset of JSON that includes regular expressions and functions, for react-native. This is a fork of project: https://github.com/yahoo/serialize-javascript",
   "main": "index.js",
   "scripts": {
+    "install": "node ./postinstall.js",
     "postinstall": "node ./postinstall.js"
   },
   "repository": {
