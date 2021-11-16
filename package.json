@@ -4,7 +4,7 @@
   "description": "Serialize JavaScript to a superset of JSON that includes regular expressions and functions, for react-native. This is a fork of project: https://github.com/yahoo/serialize-javascript",
   "main": "index.js",
   "scripts": {
-    "postinstall": "./node_modules/.bin/rn-nodeify --hack --install"
+    "postinstall": "node ./postinstall.js"
   },
   "repository": {
     "type": "git",
@@ -14,6 +14,8 @@
     "serialize",
     "serialization",
     "javascript",
+    "react-native",
+    "rn",
     "js",
     "json"
   ],
